@@ -1,7 +1,8 @@
 Base on uesr input , calculate date and time
 
-Now : {{TimePlugin.now()}}
+Now : {{TimePlugin.now}}
 '''
 +++
 Input : {{$input}}
 Result : 
+'''

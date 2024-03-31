@@ -22,7 +22,7 @@ public class Demo04 : BaseDemo
 
 
     public override Task<KernelPlugin[]> CreatePluginsAsync(Kernel kernel){
-        KernelPlugin[] Plugins = {kernel.CreatePluginFromPromptDirectory("/Users/yangchengru/Documents/C#training/SKConsole/Prompts")};
+        KernelPlugin[] Plugins = new KernelPlugin[]{kernel.CreatePluginFromPromptDirectory("/Users/yangchengru/Documents/C#training/SKConsole/Prompts")};
         
         return Task.FromResult(Plugins);
     }

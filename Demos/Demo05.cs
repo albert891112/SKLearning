@@ -55,10 +55,6 @@ public class Demo05 : BaseDemo
         return response;
 
     }
-
-
-     
-
     public override string? ScreemPrompt => "How can i help you?";
     
 }
