@@ -1,13 +1,16 @@
 
+using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using Configs;
 using Demos;
 using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.ChatCompletion;
+using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Microsoft.SemanticKernel.Plugins.Core;
 
 namespace Demos;
 
-public class Demo05 : BaseDemo
+public class Demo06 : BaseDemo
 {
     protected override Kernel CreateKernel(SkConfig config)
     {
@@ -37,16 +40,15 @@ public class Demo05 : BaseDemo
 
     protected override async Task<string?> HandlePrompt(Kernel kernel, string userPrompt){
 
-        var args = new KernelArguments
-        {
-            {"input", userPrompt}
+        var setting = new OpenAIPromptExecutionSettings{
+            ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions
         };
 
-        var Plugin = Plugins["Prompts"]["Time"];
+        var chatCompletionServer = kernel.GetRequiredService<IChatCompletionService>();
 
-        var response = await kernel.InvokeAsync<string>(Plugin , args);
+        var response = await chatCompletionServer.GetChatMessageContentsAsync(userPrompt, executionSettings : setting ,kernel :  kernel);
 
-        return response;
+        return response.ToString();
 
     }
     public override string? ScreemPrompt => "How can i help you?";
