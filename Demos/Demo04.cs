@@ -2,6 +2,7 @@ using Configs;
 using Demos;
 using Microsoft.SemanticKernel;
 
+
 namespace Demos;
 
 public class Demo04 : BaseDemo
@@ -21,7 +22,7 @@ public class Demo04 : BaseDemo
 
 
     public override Task<KernelPlugin[]> CreatePluginsAsync(Kernel kernel){
-        KernelPlugin[] Plugins = new KernelPlugin[]{kernel.CreatePluginFromPromptDirectory("/Users/yangchengru/Documents/C#training/SKConsole/Prompts/")};
+        KernelPlugin[] Plugins = {kernel.CreatePluginFromPromptDirectory("/Users/yangchengru/Documents/C#training/SKConsole/Prompts")};
         
         return Task.FromResult(Plugins);
     }

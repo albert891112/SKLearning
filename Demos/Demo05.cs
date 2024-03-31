@@ -48,7 +48,7 @@ public class Demo05 : BaseDemo
             {"input", userPrompt}
         };
 
-        var Plugin = Plugins["Prompts"]["TimeCalculator"];
+        var Plugin = Plugins["Prompts"]["Time"];
 
         var response = await kernel.InvokeAsync<string>(Plugin , args);
 
