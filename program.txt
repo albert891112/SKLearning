@@ -1,0 +1,53 @@
+// See https://aka.ms/new-console-template for more information
+using System.Reflection.Metadata.Ecma335;
+using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.Connectors.OpenAI;
+
+var kernalbuilder = Kernel.CreateBuilder();
+
+var AIKey = "36ed8638bdaa49d5b591a79bc7765298";
+var EndPoint = "https://albertsklearning.openai.azure.com/";
+var model = "albertGpt35";
+kernalbuilder.AddAzureOpenAIChatCompletion(
+    deploymentName:model,
+    endpoint:EndPoint,
+    apiKey:AIKey
+);
+
+var kernel = kernalbuilder.Build();
+
+// var prompt = @"{{$input}}
+
+// One line TLDR with the fewest words.";
+
+// var summarize = kernel.CreateFunctionFromPrompt(prompt, executionSettings: new OpenAIPromptExecutionSettings { MaxTokens = 100 });
+
+// string text1 = @"
+// 1st Law of Thermodynamics - Energy cannot be created or destroyed.
+// 2nd Law of Thermodynamics - For a spontaneous process, the entropy of the universe increases.
+// 3rd Law of Thermodynamics - A perfect crystal at zero Kelvin has zero entropy.";
+
+
+
+// Console.WriteLine(await kernel.InvokeAsync(summarize, new() { ["input"] = text1 }));
+
+
+
+while(true){
+    Console.WriteLine("Enter the text to summarize");
+    var text = Console.ReadLine();
+    var prompt = GetPromptString(text);
+
+    System.Console.WriteLine(await kernel.InvokePromptAsync<string>("Can you tell me What time is it?"));
+    
+ 
+}
+ string GetPromptString(string userInvoke) => 
+  $"how many people in Name List? Name List :{userInvoke}";
+
+
+
+  
+
+
+

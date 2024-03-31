@@ -1,0 +1,26 @@
+﻿// See https://aka.ms/new-console-template for more information
+using System.Reflection.Metadata.Ecma335;
+using Configs;
+using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.Connectors.OpenAI;
+using Demos;
+
+
+var AIKey = "36ed8638bdaa49d5b591a79bc7765298";
+var EndPoint = "https://albertsklearning.openai.azure.com/";
+var model = "albertGpt35";
+
+var kernelConfig = new SkConfig(endpoint : EndPoint, apiKey : AIKey, deploymentName: model);
+
+
+var demoUtility = new DemoUtility();
+var demo = demoUtility.demos[args[0]]??new Demo01();
+
+await demo.InitializeKernel(kernelConfig);
+await demo.RunAsync();
+
+
+  
+
+
+
