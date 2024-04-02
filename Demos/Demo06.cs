@@ -6,7 +6,7 @@ using Demos;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
-using Microsoft.SemanticKernel.Plugins.Core;
+using Microsoft.SemanticKernel.Plugins;
 
 namespace Demos;
 
@@ -48,7 +48,7 @@ public class Demo06 : BaseDemo
 
         var response = await chatCompletionServer.GetChatMessageContentsAsync(userPrompt, executionSettings : setting ,kernel :  kernel);
 
-        return response.ToString();
+        return response.FirstOrDefault()?.Content;
 
     }
     public override string? ScreemPrompt => "How can i help you?";

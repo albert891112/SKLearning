@@ -6,7 +6,7 @@ using Demos;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
-using Microsoft.SemanticKernel.Plugins.Core;
+using Microsoft.SemanticKernel.Plugins;
 
 namespace Demos;
 
