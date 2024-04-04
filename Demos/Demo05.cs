@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using Configs;
 using Demos;
 using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.Plugins;
+using Microsoft.SemanticKernel.Plugins.Core;
 
 namespace Demos;
 
