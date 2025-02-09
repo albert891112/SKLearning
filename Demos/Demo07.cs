@@ -1,4 +1,5 @@
 
+using System.ComponentModel;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using Configs;
@@ -14,6 +15,10 @@ public class Demo07 : BaseDemo
 {
     private readonly ChatHistory history = new ChatHistory();
 
+    [KernelFunction , Description("Get the current date")]
+    public string getDate(int a  , int b ){
+        return DateTime.Now.ToString("yyyy/MM/dd");
+    }
     protected override Kernel CreateKernel(SkConfig config)
     {
         var kernelBuilder  = Kernel.CreateBuilder()
@@ -25,7 +30,7 @@ public class Demo07 : BaseDemo
         );
 
         kernelBuilder.Plugins.AddFromType<TimePlugin>();
-
+        kernelBuilder.Plugins.AddFromFunctions("TimePlugin");
 
         var kernel = kernelBuilder.Build();
 
@@ -60,5 +65,5 @@ public class Demo07 : BaseDemo
 
     }
     public override string? ScreemPrompt => "How can i help you?";
-    
+
 }

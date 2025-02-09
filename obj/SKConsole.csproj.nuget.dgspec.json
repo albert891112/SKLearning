@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yangchengru/Documents/C#training/SKConsole/SKConsole.csproj": {}
+    "/Users/yangchengru/Documents/SKConsole/SKConsole.csproj": {}
   },
   "projects": {
-    "/Users/yangchengru/Documents/C#training/SKConsole/SKConsole.csproj": {
+    "/Users/yangchengru/Documents/SKConsole/SKConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yangchengru/Documents/C#training/SKConsole/SKConsole.csproj",
+        "projectUniqueName": "/Users/yangchengru/Documents/SKConsole/SKConsole.csproj",
         "projectName": "SKConsole",
-        "projectPath": "/Users/yangchengru/Documents/C#training/SKConsole/SKConsole.csproj",
+        "projectPath": "/Users/yangchengru/Documents/SKConsole/SKConsole.csproj",
         "packagesPath": "/Users/yangchengru/.nuget/packages/",
-        "outputPath": "/Users/yangchengru/Documents/C#training/SKConsole/obj/",
+        "outputPath": "/Users/yangchengru/Documents/SKConsole/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yangchengru/.nuget/NuGet/NuGet.Config"

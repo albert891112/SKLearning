@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qzyg5J7usbK6zT1gqOJp6eV7Uqnad8scJGTjin8l/jlFpxGYOM6lS+cIUCwT20S+A7nlgcW1RWYFzHWImLo+pQ==",
+  "dgSpecHash": "FVqjJlDglwbfondKGQlSqxjR3uSgSJZkrmUywyX6DyzcTkcFGoi5RDpgHRY5MVNdgo37HWujcq6R8/s/AgkVlQ==",
   "success": true,
-  "projectFilePath": "/Users/yangchengru/Documents/C#training/SKConsole/SKConsole.csproj",
+  "projectFilePath": "/Users/yangchengru/Documents/SKConsole/SKConsole.csproj",
   "expectedPackageFiles": [
     "/Users/yangchengru/.nuget/packages/azure.ai.openai/1.0.0-beta.14/azure.ai.openai.1.0.0-beta.14.nupkg.sha512",
     "/Users/yangchengru/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
