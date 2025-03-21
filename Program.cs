@@ -6,9 +6,9 @@ using Microsoft.SemanticKernel.Connectors.OpenAI;
 using Demos;
 
 
-var AIKey = "36ed8638bdaa49d5b591a79bc7765298";
-var EndPoint = "https://albertsklearning.openai.azure.com/";
-var model = "albertGpt35";
+var AIKey = "";
+var EndPoint = "";
+var model = "";
 
 var kernelConfig = new SkConfig(endpoint : EndPoint, apiKey : AIKey, deploymentName: model);
 
