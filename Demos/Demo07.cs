@@ -30,7 +30,7 @@ public class Demo07 : BaseDemo
         );
 
         kernelBuilder.Plugins.AddFromType<TimePlugin>();
-        kernelBuilder.Plugins.AddFromFunctions("TimePlugin");
+        //kernelBuilder.Plugins.AddFromFunctions("TimePlugin");
 
         var kernel = kernelBuilder.Build();
 
@@ -40,7 +40,7 @@ public class Demo07 : BaseDemo
 
     public override Task<KernelPlugin[]> CreatePluginsAsync(Kernel kernel){
         
-        KernelPlugin[] Plugins = new KernelPlugin[]{kernel.CreatePluginFromPromptDirectory("/Users/yangchengru/Documents/C#training/SKConsole/Prompts/")};
+        KernelPlugin[] Plugins = new KernelPlugin[]{kernel.CreatePluginFromPromptDirectory("./Prompts/")};
         
         return Task.FromResult(Plugins);
     }
